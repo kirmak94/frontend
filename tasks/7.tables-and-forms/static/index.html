@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Форма выбора питомца</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<main>
-    <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
-</main>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <title>Форма выбора питомца</title>
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <main>
+         <h1>Найди себе друга!</h1>
+         <form method="post" action='/pets/orders'>
+            <label for='pet-type'>Тип питомца:</label>
+            <select id='pet-type' name="petType">
+               <option value='cat'>Кошка</option>
+               <option value='dog'>Собака</option>
+               <option value='tiger'>Тигр</option>
+            </select>
+            <br>
+            <label>Пол:<br>
+            <input checked type='radio' id='gender' name='gender' value='boy'>самец<br>
+            <input type='radio' id='gender' name='gender' value='girl'>самка<br>
+            <input type='radio' id='gender' name='gender' value='none'>¯\_(ツ)_/¯<br>
+            </label>
+            <label for='eye-color'>Цвет глаз:</label><br>
+            <input type='color' id='eye-color' name='eyeColor'>
+            <br>
+            <label for='tail-length'>Длинна хвоста:</label>
+            <input id='tail-length' name='tailLength' type='range' min='7' max ='120'>
+			<br>
+            <label for='name'>Имя:</label>
+            <input id='name' name='name' type='text' placeholder='укажи имя хозяина' required>
+			<br>
+            <label for='date-of-birth'>Дата рождения:</label>
+            <input id='date-of-birth' name='dateOfBirth' type='date'  required>
+			<br>
+            <label for='phone'>Телефон:</label>
+            <input id='phone' name='phone' type='phone' placeholder='укажи свой номерочек' required >
+			<br>
+            <label for='email'>Длинна хвоста:</label>
+            <input id='email' name='email' type='email'placeholder='укажи свой почтовый ящик' required>
+			<br>
+            <label >Я ознакомлен с правилами сервиса
+            <input id='c' name='rules' type='checkbox' value='true' required>
+			<br>
+            </label>
+            <input type='submit'>
+			<input type='reset'>
+         </form>
+         <!--Форму размещай тут-->
+      </main>
+   </body>
 </html>
